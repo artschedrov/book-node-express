@@ -19,7 +19,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-  res.render('about', {fortune: fortune.getFortunes});
+  res.render('about', {
+    fortune: fortune.getFortunes,
+    pageTestScript: '/qa/tests-about.js'
+  });
 });
 
 // page 404
